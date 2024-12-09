@@ -1,4 +1,4 @@
-#!/bin/bash
+./#!/bin/bash
 
 SOURCE=$(pwd)/target/test-classes/projects/it1/project/app
 TARGET=$(pwd)/src/main/resources/archetype-resources
@@ -19,7 +19,7 @@ echo "/src/main"
 echo "--------------------------------------------------------------------------------"
 rm -rfv "${TARGET}"/src/main
 mkdir -pv "${TARGET}"/src/main/java
-cp -rv "${SOURCE}"/src/main/java/com/example/app/web "${TARGET}"/src/main/java
+cp -rv "${SOURCE}"/src/main/java/com/example/app/* "${TARGET}"/src/main/java
 mkdir -pv "${TARGET}"/src/main/resources
 cp -rv "${SOURCE}"/src/main/resources "${TARGET}"/src/main
 mkdir -pv "${TARGET}"/src/main/webapp
@@ -32,7 +32,7 @@ echo "/src/test"
 echo "--------------------------------------------------------------------------------"
 rm -rfv "${TARGET}"/src/test
 mkdir -pv "${TARGET}"/src/test/java
-cp -rv "${SOURCE}"/src/test/java/com/example/app/web "${TARGET}"/src/test/java
+cp -rv "${SOURCE}"/src/test/java/com/example/app/* "${TARGET}"/src/test/java
 echo "================================================================================"
 echo
 
